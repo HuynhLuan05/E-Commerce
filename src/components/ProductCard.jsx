@@ -1,12 +1,5 @@
 import React from 'react';
 
-/**
- * ProductCard Component
- * - Tag SALE xanh lá
- * - Huy hiệu Khách hàng thân thiết
- * - Danh mục, Tên, Giá bán và Giá gốc gạch ngang
- * - Nút 'Add to card' (Node 7-12) kích hoạt tăng Cart counter (Node 7-36)
- */
 export default function ProductCard({
   id = 1,
   name = 'Pure Pineapple',
@@ -68,7 +61,7 @@ export default function ProductCard({
           </div>
         </div>
 
-        {/* Nút 'Add to card' - Node 7-12 */}
+        {/* Nút 'Add to card' */}
         <button
           type="button"
           onClick={() => onAddToCart && onAddToCart({ id, name, price })}

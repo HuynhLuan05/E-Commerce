@@ -1,10 +1,5 @@
 import React from 'react';
 
-/**
- * DetailView Component
- * Tương ứng với Annotation Node 7-28: 'Kết quả hiển thị ở trang Detail'
- * Hiển thị kết quả tìm kiếm nhận từ Home sau khi nhấn nút kính lúp (Node 7-34)
- */
 export default function DetailView({
   searchQuery = 'Reasonable Price',
   onBackToHome,
@@ -35,13 +30,11 @@ export default function DetailView({
         </button>
       </div>
 
-      {/* Khung hiển thị kết quả đúng như Figma Screenshot 134055 */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-xl font-bold text-gray-800 mb-4">
           Chi tiết kết quả tìm kiếm
         </h2>
 
-        {/* Khung viền chữ nhật hiển thị text đã nhập ở Home */}
         <div className="border border-gray-300 rounded-sm p-6 min-h-[260px] bg-white shadow-inner flex flex-col justify-start">
           <p className="text-base font-medium text-gray-900 mb-2">
             {searchQuery || 'Chưa có từ khóa tìm kiếm'}

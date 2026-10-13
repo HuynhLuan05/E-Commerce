@@ -6,9 +6,6 @@ import FooterView from './components/FooterView';
 
 /**
  * [VIEW] DetailView
- * Yêu cầu:
- * - Bao gồm Header, Footer giống ở trang Home.
- * - Một thẻ <textarea> chứa nội dung bất kì (nhận dữ liệu từ ô tìm kiếm ở Home truyền sang).
  */
 export default function DetailView({
   cartCount,
@@ -67,10 +64,10 @@ export default function DetailView({
           {/* Heading */}
           <div className="mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight mb-2">
-              Trang Detail (Hiển thị kết quả tìm kiếm)
+              Trang Detail
             </h2>
             <p className="text-xs sm:text-sm text-gray-500">
-              Dữ liệu từ ô tìm kiếm trang Home được xử lý qua Model - Controller và hiển thị trực tiếp vào thẻ <code className="bg-purple-100 text-[#4c1d54] px-1.5 py-0.5 rounded font-mono text-xs">&lt;textarea&gt;</code> bên dưới:
+              
             </p>
           </div>
 
@@ -93,9 +90,7 @@ export default function DetailView({
             />
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-gray-500 pt-1">
-              <span>
-                Trạng thái: <strong className="text-emerald-600">Đã nhận dữ liệu thành công từ MVC Controller</strong>
-              </span>
+              
               <span>Số ký tự: {searchQuery.length}</span>
             </div>
           </div>

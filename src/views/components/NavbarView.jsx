@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 /**
  * [VIEW] NavbarView
- * Thanh điều hướng đa thiết bị (Responsive Mobile Hamburger & Desktop)
+ * Thanh điều hướng đa thiết bị 
  */
 export default function NavbarView({
   currentView = 'HOME',

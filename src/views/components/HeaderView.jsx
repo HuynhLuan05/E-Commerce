@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
  * [VIEW] HeaderView
  * Hiển thị Header gồm:
  * - Logo / Brand
- * - Search Bar (Node 7-34: Nút tìm kiếm)
- * - Cart Icon & Wishlist (Node 7-36: Số lượng tăng khi click Add to cart)
+ * - Search Bar 
+ * - Cart Icon & Wishlist
  */
 export default function HeaderView({
   cartCount = 0,
@@ -56,7 +56,7 @@ export default function HeaderView({
           </div>
         </div>
 
-        {/* Search Bar - Chứa Node 7-34 'Nhấn nút' */}
+        {/* Search Bar */}
         <form
           onSubmit={handleSubmit}
           className="w-full md:max-w-xl flex items-stretch border border-gray-300 rounded overflow-hidden focus-within:border-[#4c1d54] focus-within:ring-1 focus-within:ring-[#4c1d54] transition shadow-sm"
@@ -65,11 +65,11 @@ export default function HeaderView({
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Search for products (nhập dữ liệu bất kì...)"
+            placeholder="Search for products"
             className="flex-1 px-4 py-2.5 text-sm text-gray-800 outline-none placeholder-gray-400"
           />
 
-          {/* Node 7-34: Nút tìm kiếm */}
+          {/* Nút tìm kiếm */}
           <button
             type="submit"
             id="search-btn-node-7-34"
@@ -85,7 +85,7 @@ export default function HeaderView({
           </button>
         </form>
 
-        {/* Desktop Cart Counter & Wishlist - Node 7-36 */}
+        {/* Desktop Cart Counter & Wishlist */}
         <div className="hidden md:flex items-center space-x-3">
           <div className="flex items-center space-x-2 border border-gray-200 px-3.5 py-2 rounded text-gray-700 hover:border-gray-400 transition cursor-pointer">
             <svg className="w-4 h-4 fill-[#4c1d54]" viewBox="0 0 24 24">

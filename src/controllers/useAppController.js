@@ -4,7 +4,6 @@ import { SearchModel } from '../models/searchModel';
 import { INITIAL_PRODUCTS } from '../models/productModel';
 
 /**
- * [CONTROLLER] useAppController
  * Đóng vai trò là Controller trong mô hình MVC:
  * 1. Tiếp nhận sự kiện người dùng từ Views (Search, Add to Cart, Điều hướng)
  * 2. Tương tác với Models để cập nhật và truy xuất dữ liệu
@@ -21,16 +20,14 @@ export function useAppController() {
   const [currentView, setCurrentView] = useState('HOME'); // 'HOME' | 'DETAIL'
   const [products] = useState(INITIAL_PRODUCTS);
 
-  // Controller Action 1: Xử lý tìm kiếm (Node 7-34 "Nhấn nút")
-  // Nhập dữ liệu bất kỳ ở Home -> Bấm tìm kiếm -> Chuyển sang Detail và hiển thị vào textarea
+  // Controller Action 1: Xử lý tìm kiếm
   const handleSearch = (keyword) => {
     const updatedQuery = searchModel.setQuery(keyword);
     setSearchQuery(updatedQuery);
     setCurrentView('DETAIL'); // Tự động chuyển sang trang Detail
   };
 
-  // Controller Action 2: Xử lý click 'Add to cart' (Node 7-12)
-  // Tăng số lượng giỏ hàng theo từng lần click
+  // Controller Action 2: Xử lý click 'Add to cart'
   const handleAddToCart = (product) => {
     const newCount = cartModel.increment();
     setCartCount(newCount);
@@ -48,7 +45,7 @@ export function useAppController() {
   };
 
   return {
-    // Data (từ Model)
+    // Data
     cartCount,
     searchQuery,
     currentView,

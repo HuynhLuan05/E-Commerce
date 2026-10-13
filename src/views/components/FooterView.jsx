@@ -2,7 +2,6 @@ import React from 'react';
 
 /**
  * [VIEW] FooterView
- * Footer chân trang theo đúng template Figma
  */
 export default function FooterView() {
   const quickLinks = [

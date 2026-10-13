@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
 
-/**
- * Header Component
- * Bao gồm:
- * - Logo / Brand
- * - Search Bar (Input + Button tìm kiếm - Node 7-34 'Nhấn nút')
- * - Wishlist & Cart Counter (Node 7-36 'Kết quả khi nhấn add to cart')
- */
 export default function Header({
   cartCount = 0,
   wishlistCount = 0,
@@ -34,7 +27,7 @@ export default function Header({
           </a>
         </div>
 
-        {/* Search Bar - Chứa Node 7-34 'Nhấn nút' */}
+        {/* Search Bar */}
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-xl flex items-stretch border border-gray-300 rounded-sm overflow-hidden focus-within:border-[#4c1d54] transition"
@@ -46,7 +39,7 @@ export default function Header({
             placeholder="Search for products"
             className="flex-1 px-4 py-2 text-sm text-gray-700 outline-none"
           />
-          {/* Node 7-34: Nút tìm kiếm (Kính lúp) */}
+          {/* Nút tìm kiếm */}
           <button
             type="submit"
             id="search-btn-7-34"
@@ -75,7 +68,7 @@ export default function Header({
             <span className="text-sm font-semibold text-gray-700">{wishlistCount}</span>
           </button>
 
-          {/* Cart - Cập nhật khi nhấn 'Add to card' (Node 7-36) */}
+          {/* Cart */}
           <button
             type="button"
             className="flex items-center space-x-2 border border-gray-200 px-3 py-1.5 rounded-sm hover:border-gray-400 transition relative"

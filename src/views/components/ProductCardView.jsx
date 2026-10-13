@@ -61,7 +61,7 @@ export default function ProductCardView({
           </div>
         </div>
 
-        {/* Nút 'Add to card' - Node 7-12: Kích hoạt Controller tăng giỏ hàng */}
+        {/* Nút 'Add to card' */}
         <button
           type="button"
           onClick={() => onAddToCart && onAddToCart(product)}
